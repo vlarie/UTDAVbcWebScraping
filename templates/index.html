@@ -8,20 +8,107 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="jumbotron text-center">
             <h1>All Things Current on Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update</a></p>
+            <br>
+            <br>
+            <br>
+            <p><a class="btn btn-dark btn-lg" href="/scrape" role="button">Update</a></p>
+            <br>
+            <h6 id="buttonFooter">Updating data may take a minute <br>(scraping web for latest information).</h6>
         </div>
-    
-        <!-- <div class="row" id="mars-listings">
-            <div class="col-md-12">
-            <h4 class="heading">{{listings.price}} {{listings.headline}}</h4>
-            <small>{{listings.hood}}</small>
+    </div>
+    <div class="container-fluid w-75">
+        <div class="row" id="mars_news">
+            <div class="col-md-8">
+                <h2 id="newsSection">Latest Mars News</h2>
+                <div class="media">
+                    <div class="media-body">
+                        <img id="newsImage" class="shadow-sm p-3 mb-5 bg-white rounded" src="{{mars.news_img}}">
+                        <h4 class="heading" id="newsHeadline"><a id="newsHeadline" href="{{mars.news_url}}">{{mars.news_title}}</a></h4>
+                        <hr>
+                        <p>{{mars.news_p}}</p>
+                    </div>
+                </div>
             </div>
-        </div> -->
-    
+            <div class="col-md-4">
+                <table class="table table-striped">
+                    <thead class="box thead-dark">
+                        <th>
+                            <img id="tempIcon" src="../static/images/CWthermometerCOLD.png" style="vertical-align:top" width="100%">
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr style="text-align: center"><td>{{mars.mars_weather[0]}}</td></tr>
+                        <tr style="text-align: center"><td>{{mars.mars_weather[1]}}</td></tr>
+                        <tr style="text-align: center"><td>{{mars.mars_weather[2]}}</td></tr>
+                        <tr style="text-align: center"><td>{{mars.mars_weather[3]}}</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <h2 id="newsSection">Featured Mars Image</h2>
+                <img src="{{mars.featured_image_url}}" alt="{{mars.feat_img_capt}}" width="100%">
+                <h5><a id="newsHeadline" href="{{mars.featured_image_url}}">{{mars.feat_img_capt}}</a></h5>
+            </div>
+            <div class="col-md-4">
+                <h2 id="newsSection">Mars Facts</h2>
+                    {% include "marsFactDFsouped.html" %}
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="newsSection">Mars Hemispheres</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" id="hemicard">
+                    <div class="card-body">
+                        <img src="{{mars.hemisphere_image_urls[0]['url']}}" title="{{mars.hemisphere_image_urls[0]['title']}}" width=100%>
+                        <h5>{{mars.hemisphere_image_urls[0]["title"]}}</h5>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" id="plotCards">
+                    <div class="card-body">
+                        <img src="{{mars.hemisphere_image_urls[1]['url']}}" title="Mars Hemisphere" width=100%>
+                        <h5>{{mars.hemisphere_image_urls[1]["title"]}}</h5>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" id="plotCards">
+                    <div class="card-body">
+                        <img src="{{mars.hemisphere_image_urls[2]['url']}}" title="Mars Hemisphere" width=100%>
+                        <h5>{{mars.hemisphere_image_urls[2]["title"]}}</h5>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" id="plotCards">
+                    <div class="card-body">
+                        <img src="{{mars.hemisphere_image_urls[3]['url']}}" title="Mars Hemisphere" width=100%>
+                        <h5>{{mars.hemisphere_image_urls[3]["title"]}}</h5>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

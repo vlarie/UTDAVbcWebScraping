@@ -1,0 +1,68 @@
+.jumbotron {
+    border-radius: 0px!important;
+    background-image: url("../images/marsBG.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+#buttonFooter {
+    color: rgb(197, 197, 197)!important;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0px;
+    border-bottom: black;
+}
+
+#newsSection {
+    background-color: maroon;
+    color: white;
+}
+
+#newsImage {
+    margin-right: 1rem;
+    margin-bottom: 1rem!important;
+    float: left;
+    border-radius: 1px;
+}
+
+.media-body {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 2px;
+    overflow: visible;
+}
+
+#newsHeadline {
+    color: black!important;
+}
+
+h2 {
+    padding: 10px;
+}
+
+.heading {
+    padding: 10px;
+    color: black!important;
+}
+
+#marsFacts {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+#footer {
+    padding: 10px;
+    text-align: center!important;
+    display: inherit;
+}
