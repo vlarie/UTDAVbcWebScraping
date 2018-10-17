@@ -179,3 +179,33 @@ def scrape():
     ################################
 
     return mars
+
+
+sample_data = {
+  "featured_image_url": "/spaceimages/images/mediumsize/PIA19036_ip.jpg",
+  "hemisphere_image_urls": [
+    {
+      "img_url": "",
+      "title": "Cerberus Hemisphere Enhanced"
+    },
+    {
+      "img_url": "",
+      "title": "Schiaparelli Hemisphere Enhanced"
+    },
+    {
+      "img_url": "",
+      "title": "Syrtis Major Hemisphere Enhanced"
+    },
+    {
+      "img_url": "",
+      "title": "Valles Marineris Hemisphere Enhanced"
+    }
+  ],
+  "mars_facts_table": "",
+  "mars_news": [
+    {
+      "title": "Click the Refresh Mars data at the top Right"
+    }
+  ],
+  "mars_weather": "Current Mars Climate is super cold"
+}

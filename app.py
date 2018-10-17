@@ -16,9 +16,8 @@ mongo = PyMongo(app)
 @app.route("/")
 def home(): 
     print("Server received request for 'Home' page")
-    mars = mongo.db.mars
-    mars_data = scrape_mars.scrape()
-    marsData = mongo.db.mars.find_one()
+    mars = scrape_mars.sample_data
+    # marsData = mongo.db.mars.find_one()
     return render_template("index.html", mars=marsData)
 
 @app.route("/scrape")
