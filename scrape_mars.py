@@ -16,7 +16,7 @@ import io
 
 
 def init_browser():
-    exec_path = {'executable_path': './chromedriver.exe'}
+    exec_path = {'executable_path': '/Users/vlari/chromedriver.exe'}
     return Browser("chrome", **exec_path, headless=True)
 
 def scrape():
