@@ -12,7 +12,7 @@ app = Flask(__name__)
 # Establish MongoDB connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 # This configuration is for Heroku and is in development
-app.config["MONGO_URI"] = f"mongodb://<{dbuser}>:<{dbpassword}>@ds111063.mlab.com:11063/heroku_4s5hf8p0"
+app.config["MONGO_URI"] = f"mongodb://{dbuser}:{dbpassword}@ds111063.mlab.com:11063/heroku_4s5hf8p0"
 mongo = PyMongo(app)
 
 
